@@ -1,0 +1,23 @@
+<section class="home-team">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12">
+        <h2 class="pb-5">{% t home.team.title %}</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for p in site.translations[site.lang]["home"]["team"]["items"] %}
+      <div class="col-12 col-sm-6 col-lg-4 d-flex flex-column team-item">
+            <div class="image">
+              <img src="{{ site.assets | append: p.pic }}" />
+            </div>
+          
+            <h4>{{ p.name }}</h4>
+            <h5>Incorporación en {{ p.date }}</h5>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

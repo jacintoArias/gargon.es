@@ -24,8 +24,8 @@ home:
     subtitle: 'En Albacete desde 1947'
   description:
     title: 'Asesoramiento Jurídico Multidisciplinar'
-    paragraph_a: 'Somos un despacho con un alto nivel de especialización en todas las materias, gracias a la continua incorporación de profesionales a lo largo delos años.'
-    paragraph_b: 'Uno de nuestros principales valores es estar a la vanguardia y en constante actualización en las distintas áreas del derecho, para así poder ofrecer un servicio de garantía y calidad a nuestros clientes, quienes para nosotros suponen nuestro mayor valor y potencial, por lo que el objetivo primordial es prestarles siempre el mejor servicio partiendo de una atención personal y humana.'
+    paragraph_a: 'Ofrecemos un servicio de asesoramiento jurídico multidisciplinar y de defensa legal con alto nivel de especialización.'
+    paragraph_b: 'Uno de nuestros principales valores es combinar la experiencia con la constante actualización en las distintas áreas del Derecho, para prestar un servicio personalizado de garantía y calidad. El ejercicio de la abogacía constituye nuestra vocación y la aplicación del Derecho el medio para alcanzar la solución más acertada a los problemas legales que se plantean.'
   services:
     title: 'Expertos en los Principales Ámbitos del Derecho'
     items:
@@ -38,8 +38,26 @@ home:
       - text: Fiscal
       - text: Procesal
   about:
-    title: 'A tu disposición'
-    text: 'Fundado en el año 1947 por don Juan José García Carbonell. Uno de los despachos con más experiencia y antigüedad en la ciudad de Albacete.'
+    title: 'Tradición'
+    text: 'El Despacho Jurídico García Carbonell nació  en 1947, fundado  por el abogado D. Juan José García Carbonell. Hoy es uno de los despachos con más experiencia y antigüedad de la ciudad de Albacete.'
+  team:
+    title: 'Equipo'
+    items:
+      - name: 'Julio García Bueno'
+        date: '1977'
+        pic: 'team/julio.png'
+      - name: 'Jacinto Arias López'
+        date: '1987'
+        pic: 'team/jacinto.png'
+      - name: 'José Luis González'
+        date: '1990'
+        pic: 'team/jose.png'
+      - name: 'Julio García Cantó'
+        date: '2010'
+        pic: 'team/julito.png'
+      - name: 'Manuel Cazalilla Ruiz'
+        date: '2016'
+        pic: 'team/manu.png'
   contact:
     title: 'Contacto'
     address: 'Calle Teodoro Camino nº 21 Piso 1, 02006 Albacete'

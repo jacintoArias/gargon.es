@@ -116,9 +116,6 @@
   }
 }
 
-.home-about {
-  background-color: $home-about-background-color;
-}
 
 .home-about {
   position: relative;
@@ -147,6 +144,27 @@
     }
   }
 }
+
+
+.home-team {
+  background-color: $home-about-background-color;
+
+  .team-item {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 40px;
+
+    .image {
+      padding-bottom: 16px;
+
+      img {
+        width: 100%;
+      }
+      
+    }
+  }
+}
+
 
 .home-contact {
   position: relative;
