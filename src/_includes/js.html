@@ -1,0 +1,25 @@
+<!-- Latest compiled JavaScript -->
+<script src="{{
+    site.assets | append: site.data.app_manifest['app.js']
+  }}"></script>
+
+<script>
+  window.cookieconsent.initialise({
+    palette: {
+      popup: {
+        background: '#000',
+      },
+      button: {
+        background: '#f1d600',
+      },
+    },
+    content: {
+      message: '{% t cookieconsent.message %}',
+      dismiss: '{% t cookieconsent.dismiss %}',
+      link: '{% t cookieconsent.link %}',
+      href: '/privacy',
+      target: '_self',
+    },
+    showLink: true,
+  });
+</script>

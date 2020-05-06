@@ -1,0 +1,15 @@
+dist*
+site*
+dist.zip
+
+docker/.yarn-cache.tgz
+.yarn-cache.tgz
+node_modules/
+
+src/assets/*.js
+src/assets/*.css
+src/assets/*.map
+src/_data/*manifest.json
+
+.DS_Store
+.vscode

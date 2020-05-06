@@ -1,0 +1,44 @@
+// Colors
+$palette_green: #344E41;
+$palette_dark_green: #1D2B24;
+$palette_gold: #C0AA81;
+$palette_gray_faded: #EBEDEC;
+$palette_gray:#A4A8A4;
+
+$black: black;
+$white: white;
+
+// Body and layout
+$global-font-color: $palette_green;
+$highlight-color: $palette_gold;
+$global-text-decoration-color: $palette_green;
+
+// Navbar
+$navbar-height: 8vh;
+$navbar-background-color: $palette_dark_green;
+$navbar-links-color: $palette_gray;
+$navbar-links-color-hover: $white;
+$navbar-border-color: $palette_gold;
+
+// Home Header
+$header-background-overlay-color: rgba(29,43,36, 0.6);
+
+// Home Description
+$description-background-color: white;
+
+// Home Services
+$services-background-color: $palette_green;
+
+// Home About
+$home-about-background-color: $white;
+$home-about-card-background-color: $palette_gray_faded;
+
+// Home Hotspots
+$hotspots-background-color: white;
+
+// Home Contact
+$home-contact-background-color: $palette_green;
+$home-contant-overlay-color: rgba(00, 00, 00, 0.2);
+
+// Footer
+$footer-background-color: $palette_dark_green;

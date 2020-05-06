@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: ['yarn', 'start']
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./src:/opt/app/src
+      - ./app:/opt/app/app
+      - ./dist:/opt/app/dist
+      - ./site:/opt/app/_site

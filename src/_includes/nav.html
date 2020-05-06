@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container justify-content-between">
+
+    <a class="navbar-brand scroll" href="#home"></a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarControls"
+      aria-controls="navbarControls"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="fa fa-reorder"></span>
+    </button>
+
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarControls">
+      <ul class="navbar-nav">
+        {% for l in site.translations[site.lang]["navbar"]["links"] %}
+        <li class="nav-item py-1">
+          <a class="nav-link scroll" href="{{ l.link }}">{{ l.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>

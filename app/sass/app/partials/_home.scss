@@ -1,0 +1,199 @@
+.home-header {
+  position: relative;
+  overflow: hidden;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  background: linear-gradient(
+      $header-background-overlay-color,
+      $header-background-overlay-color
+    ),
+    url(gargon-header.jpg) center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 128px;
+  padding-bottom: 92px;
+
+  .decoration-circle {
+    position: absolute;
+
+    top: 50vh;
+    right: -30vh;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 50%;
+
+    border: 1px solid $palette_gold;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .container {
+    height: 100%;
+    background-color: transparent;
+    color: white;
+
+    .title {
+      font-size: 5.5rem;
+      line-height: 6rem;
+    }
+
+    .subtitle {
+      font-size: 3rem;
+      line-height: 3.5rem;
+    }
+  }
+}
+
+.home-description {
+  position: relative;
+  z-index: 2;
+
+  background-color: $description-background-color;
+
+  // height: 50vh;
+  // min-height: 50vh;
+
+  @include media-breakpoint-down(md) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .decoration-square {
+    position: absolute;
+    top: -5vh;
+    left: -20vh;
+    width: 30vh;
+    height: 30vh;
+
+    transform: rotate(45deg);
+    border: 1px solid $palette_gold;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+}
+
+.home-services {
+  position: relative;
+  // overflow: hidden;
+
+  background-color: $services-background-color;
+  color: white;
+
+  .decoration-circle-fill {
+    position: absolute;
+    top: -25%;
+    left: -40%;
+    width: 75vh;
+    height: 75vh;
+    border-radius: 50%;
+    background-color: $palette_dark_green;
+    opacity: 0.2;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  .content {
+    z-index: 2;
+
+    .list {
+      z-index: 2;
+
+      ul {
+        list-style: inside;
+        padding-left: 0px;
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+.home-about {
+  background-color: $home-about-background-color;
+}
+
+.home-about {
+  position: relative;
+
+  background-color: $home-about-background-color;
+
+  .picture {
+    background: url(donjuan.jpg) center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .biography {
+    padding: 32px;
+    background-color: $home-about-card-background-color;
+    margin-top: 16px;
+
+    @include media-breakpoint-up(md) {
+      transform: translateX(-30%);
+      width: 120%;
+      padding: 56px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.home-contact {
+  position: relative;
+
+  background-color: $home-contact-background-color;
+  color: $white;
+
+  // .decoration-square {
+  //   position: absolute;
+  //   bottom: -25vh;
+  //   right: -25vh;
+  //   width: 50vh;
+  //   height: 50vh;
+
+  //   // transform: rotate(45deg);
+  //   border-radius: 50%;
+  //   border: 1px solid $palette_gold;
+
+  //   @include media-breakpoint-down(md) {
+  //     display: none;
+  //   }
+  // }
+
+  .picture {
+    background: linear-gradient(
+        $home-contant-overlay-color,
+        $home-contant-overlay-color
+      ),
+      url(gargon-contact.jpg) left bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .content {
+    padding-top: 64px;
+    padding-bottom: 64px;
+
+    .address {
+      font-size: 1.5rem;
+      border-bottom: solid 1px white;
+    }
+
+    .contact-items {
+      font-size: 16px;
+    }
+  }
+}

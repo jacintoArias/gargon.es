@@ -1,0 +1,66 @@
+global:
+  title: 'Despacho Jurídico García Carbonell. Gargon Abogados.'
+  description: 'Abogados en Albacete desde 1947. Asesoramiento Jurídico Multidisciplinar. Especializados en Derecho Civil, de Familia, Penal, Mercatil, Sociedades, Laboral, Administrativo, Fiscal y Procesal. Accidentes de circulación, Seguros, Contratos, Arrendamientos e Hipotécas.'
+navbar:
+  links:
+    - slug: home
+      text: Inicio
+      link: '#home'
+    - slug: company
+      text: Empresa
+      link: '#empresa'
+    - slug: services
+      text: Servicios
+      link: '#servicios'
+    - slug: team
+      text: Equipo
+      link: '#equipo'
+    - slug: contact
+      text: Contacto
+      link: '#contacto'
+home:
+  header:
+    title: 'Despacho Jurídico</br>García Carbonell'
+    subtitle: 'En Albacete desde 1947'
+  description:
+    title: 'Asesoramiento Jurídico Multidisciplinar'
+    paragraph_a: 'Somos un despacho con un alto nivel de especialización en todas las materias, gracias a la continua incorporación de profesionales a lo largo delos años.'
+    paragraph_b: 'Uno de nuestros principales valores es estar a la vanguardia y en constante actualización en las distintas áreas del derecho, para así poder ofrecer un servicio de garantía y calidad a nuestros clientes, quienes para nosotros suponen nuestro mayor valor y potencial, por lo que el objetivo primordial es prestarles siempre el mejor servicio partiendo de una atención personal y humana.'
+  services:
+    title: 'Expertos en los Principales Ámbitos del Derecho'
+    items:
+      - text: Civil
+      - text: Familia y Sucesorio
+      - text: Penal
+      - text: Mercantil y Sociedades
+      - text: Laboral
+      - text: Administrativo
+      - text: Fiscal
+      - text: Procesal
+  about:
+    title: 'A tu disposición'
+    text: 'Fundado en el año 1947 por don Juan José García Carbonell. Uno de los despachos con más experiencia y antigüedad en la ciudad de Albacete.'
+  contact:
+    title: 'Contacto'
+    address: 'Calle Teodoro Camino nº 21 Piso 1, 02006 Albacete'
+    button: 'Contacto'
+    phone: '967 55 04 41'
+    fax: '967 50 45 30'
+    email: '&#097;&#098;&#111;&#103;&#097;&#100;&#111;&#115;&#064;&#103;&#097;&#114;&#103;&#111;&#110;&#046;&#101;&#115;'
+privacy:
+  header:
+    tittle: 'Declaracion de privacidad'
+  info:
+    text: 'Este sitio utiliza cookies: pequeños archivos de texto que se colocan en su máquina para ayudar a que el sitio proporcione una mejor experiencia de usuario.
+    En general, las cookies se utilizan para conservar las preferencias del usuario, almacenar información para cosas como carritos de compras y proporcionar datos de 
+    seguimiento anónimos a aplicaciones de terceros como Google Analytics. Como regla general, las cookies mejorarán su experiencia de navegación. Sin embargo, es posible 
+    que prefiera desactivar las cookies en este sitio y en otros. La forma más efectiva de hacerlo es deshabilitar las cookies en su navegador. Sugerimos consultar la 
+     sección de Ayuda de su navegador o echar un vistazo al sitio web <a href="http://www.aboutcookies.org">Acerca de las cookies</a>, que ofrece una guía para todos 
+     los navegadores modernos.
+    <br><br>'
+footer:
+  privacy: 'Privacidad'
+cookieconsent:
+  message: 'Nos gustaría utilizar cookies y scripts de terceros para mejorar la funcionalidad de esta web'
+  link: 'Más Info'
+  dismiss: 'Aceptar'

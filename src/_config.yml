@@ -1,0 +1,57 @@
+# CONFIG
+# title: 'Consulta Felina: Lorem ipsum dolor sit amet'
+# brand: Consulta Felina
+
+baseurl: '/'
+url: ''
+assets: '/assets/'
+
+# description: 'Lorem ipsum dolor sit amet.'
+logo: '/assets/logo-square.png'
+# image:
+#   path: '/assets/page-pic.jpg'
+#   height: 100
+#   width: 100
+# social:
+#   name: Demosense
+#   links:
+#     - https://twitter.com/demosensetech
+#     - https://www.facebook.com/Demosense/
+#     - https://www.linkedin.com/company/demosense/
+
+# Build settings
+markdown: kramdown
+
+# plugins:
+# - jekyll-seo-tag
+#  - jekyll-feed
+
+gems:
+
+languages: ['es']
+defaultLang: es
+languageNames:
+  es: Spanish
+exclude_from_localizations: ['assets']
+
+sass:
+  sass_dir: _sass
+
+# Project structure config
+#permalink: /blog/:year/:title.html
+
+include: ['_pages']
+
+exclude: ['_app', 'assets/*.map']
+# collections:
+#   blog_categories:
+#     output: true
+#     permalink: /blog/category/:slug/
+
+# defaults:
+# -
+#   scope:
+#     path: ""
+#     type: blog_categories
+#   values:
+#     layout: blog_category

@@ -1,0 +1,41 @@
+.navbar {
+  background-color: $navbar-background-color;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border-bottom: solid 1px $navbar-border-color;
+
+  .navbar-brand {
+    width: 64px;
+    height: 64px; 
+    background: url(brand.png) center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @include media-breakpoint-down(md) {
+    .navbar-brand {
+      width: 48px;
+      height: 48px; 
+    }
+  }
+
+    a.nav-link {
+      color: $navbar-links-color;
+      font-size: 16px;
+      line-height: 24px;
+
+      &:hover {
+        color: $navbar-links-color-hover;
+        transition: all 0.4s ease-out;
+      }
+    }
+
+  button {
+    &.navbar-toggler {
+      span {
+        color: $navbar-links-color-hover;
+      }
+    }
+  }
+}

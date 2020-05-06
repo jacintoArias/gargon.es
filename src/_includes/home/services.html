@@ -1,0 +1,29 @@
+<section id="servicios" class="home-services">
+  <div class="decoration-circle-fill"></div>
+  <div class="container narrow content">
+
+    <div class="row">
+      <div class="col-12 text-center pb-5">
+        <h2>{% t home.services.title %}</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-around content">
+      <div class="list">
+        <ul>
+          {% for l in site.translations[site.lang]["home"]["services"]["items"] offset:0 limit:4 %}
+            <li>{{ l.text }}</li>
+          {% endfor %}
+          </ul> 
+      </div>
+      <div class="list">
+        <ul>
+          {% for l in site.translations[site.lang]["home"]["services"]["items"] offset: 4 %}
+            <li>{{ l.text }}</li>
+          {% endfor %}
+          </ul> 
+      </div>        
+    </div>
+
+  </div>
+</section>
