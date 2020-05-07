@@ -9,6 +9,7 @@ const buffer = require('vinyl-buffer');
 const child = require('child_process');
 const cssnano = require('cssnano');
 const del = require('del');
+const imagemin = require('gulp-imagemin');
 const log = require('fancy-log');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
@@ -33,11 +34,11 @@ const paths = require('./paths');
 // TASKS:
 
 // Clean style files
-gulp.task('cleanStyles', done => {
+gulp.task('cleanStyles', (done) => {
   del([
     `${paths.jekyllData}/style_manifest.json`,
     `${paths.jekyllAssets}/style-*.css*`,
-  ]).then(paths => {
+  ]).then((paths) => {
     console.log('Clean: Cleaned style files:\n', paths.join('\n'));
   });
 
@@ -45,11 +46,11 @@ gulp.task('cleanStyles', done => {
 });
 
 // Clean style-vendor files
-gulp.task('cleanVendorStyles', done => {
+gulp.task('cleanVendorStyles', (done) => {
   del([
     `${paths.jekyllData}/styleVendor_manifest.json`,
     `${paths.jekyllAssets}/styleVendor-*.css*`,
-  ]).then(paths => {
+  ]).then((paths) => {
     console.log('Clean: Cleaned vendor style files:\n', paths.join('\n'));
   });
 
@@ -57,22 +58,21 @@ gulp.task('cleanVendorStyles', done => {
 });
 
 // Clean script files
-gulp.task('cleanScripts', done => {
+gulp.task('cleanScripts', (done) => {
   del([
     `${paths.jekyllData}/app_manifest.json`,
     `${paths.jekyllAssets}/app-*.js*`,
-  ]).then(paths => {
+  ]).then((paths) => {
     console.log('Clean: Cleaned script files:\n', paths.join('\n'));
   });
 
   done();
 });
 
-
 // -> CLEAN
 gulp.task(
   'clean',
-  gulp.parallel('cleanStyles', 'cleanVendorStyles', 'cleanScripts'),
+  gulp.parallel('cleanStyles', 'cleanVendorStyles', 'cleanScripts')
 );
 
 // -> STYLES
@@ -139,11 +139,20 @@ gulp.task('scripts', () => {
     .pipe(gulp.dest(paths.jekyllAssets))
     .pipe(rev.manifest())
     .pipe(rename({ basename: 'app_manifest' }))
-    .on('error', function(error) {
+    .on('error', function (error) {
       // we have an error
-      done(error); 
+      done(error);
     })
     .pipe(gulp.dest(paths.jekyllData));
+});
+
+// -> IMAGES
+// Minify IMAGES
+gulp.task('images', (done) => {
+  return gulp.src(paths.appImages)
+    .pipe(plumber())
+    .pipe(imagemin())
+    .pipe(gulp.dest(paths.jekyllAssets))
 });
 
 // -> JEKYLL
@@ -156,7 +165,9 @@ gulp.task('jekyll', () => {
       ? paths.configFileProd
       : paths.configFileProd + ',' + paths.configFileDev;
 
-  const jekyll = child.spawn('bundle', [
+  const jekyll = child.spawn('/bin/bash', [
+    '-lc',
+    'bundle',
     'exec',
     'jekyll',
     'build',
@@ -168,17 +179,19 @@ gulp.task('jekyll', () => {
     destination,
   ]);
 
-  const jekyllLogger = buffer => {
+  const jekyllLogger = (buffer) => {
     buffer
       .toString()
       .split(/\n/)
-      .forEach(message => log('Jekyll: ' + message));
+      .forEach((message) => log('Jekyll: ' + message));
   };
 
   jekyll.stdout.on('data', jekyllLogger);
+  jekyll.stderr.on('error', jekyllLogger);
 
   return jekyll;
 });
+
 
 // -> SERVE
 // Launch browsersync server and watch for changes
@@ -197,14 +210,20 @@ gulp.task('serve', () => {
 
   // Watch for styles
   gulp.watch([paths.appSassFiles], gulp.series(['cleanStyles', 'styles']));
-  gulp.watch([paths.appSassVendorFiles], gulp.series('cleanVendorStyles', 'vendorStyles'));
+  gulp.watch(
+    [paths.appSassVendorFiles],
+    gulp.series('cleanVendorStyles', 'vendorStyles')
+  );
 
   // Watch for scripts
   gulp.watch([paths.appScriptFiles], gulp.series('cleanScripts', 'scripts'));
+
+  // Watch for images
+  gulp.watch([paths.appImages], gulp.series('images'));
 });
 
 // -> RELOAD
-gulp.task('reload', done => {
+gulp.task('reload', (done) => {
   browserSync.reload();
   done();
 });
@@ -214,7 +233,7 @@ gulp.task(
   'build',
   gulp.series(
     'clean',
-    gulp.parallel('styles', 'vendorStyles', 'scripts'),
+    gulp.parallel('styles', 'vendorStyles', 'scripts', 'images'),
     'jekyll'
   )
 );

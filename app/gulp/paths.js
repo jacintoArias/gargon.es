@@ -15,6 +15,7 @@ paths.appSassVendorFiles = `${paths.app}/sass/vendor/**/*.scss`;
 paths.appSassVendorEntry = `${paths.app}/sass/vendor/**/main.scss`;
 paths.appScriptFiles = `${paths.app}/js/**/*.js`;
 paths.appScriptEntry = `${paths.app}/js/main.js`;
+paths.appImages = `${paths.app}/assets/*.{jpg,png}`;
 
 // Jekyll files locations
 paths.jekyllData = `${paths.src}/_data/`;

@@ -1,12 +1,15 @@
-FROM node:8.13.0
+FROM node:14.2.0-stretch
 
 RUN apt-get update; \
   apt-get install -y \
-  build-essential;
+  openssl
 
-RUN apt-get install -y ruby-full;
+RUN curl -L https://get.rvm.io | bash 
 
-RUN gem install jekyll bundler;
+RUN /bin/bash -l -c "rvm requirements"; \
+  /bin/bash -l -c "rvm install 2.4"
+
+RUN /bin/bash -l -c "gem install jekyll bundler";
 
 # RUN useradd -ms /bin/bash jekyll
 
@@ -18,7 +21,7 @@ WORKDIR $APP_FOLDER
 
 COPY Gemfile $APP_FOLDER
 
-RUN bundle install --no-cache --path vendor
+RUN /bin/bash -l -c "bundle install --no-cache --path vendor"
 
 COPY package.json yarn.lock $APP_FOLDER/
 
