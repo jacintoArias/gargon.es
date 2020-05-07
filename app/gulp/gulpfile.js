@@ -167,16 +167,7 @@ gulp.task('jekyll', () => {
 
   const jekyll = child.spawn('/bin/bash', [
     '-lc',
-    'bundle',
-    'exec',
-    'jekyll',
-    'build',
-    '-s',
-    paths.src,
-    '--config',
-    configFiles,
-    '--destination',
-    destination,
+    `jekyll build -s ${paths.src} --config ${configFiles} --destination ${destination}`
   ]);
 
   const jekyllLogger = (buffer) => {
