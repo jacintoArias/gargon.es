@@ -30,13 +30,20 @@ home:
     title: 'Expertos en los Principales Ámbitos del Derecho'
     items:
       - text: Civil
-      - text: Familia y Sucesorio
       - text: Penal
       - text: Mercantil y Sociedades
       - text: Laboral
       - text: Administrativo
-      - text: Fiscal
-      - text: Procesal
+      - text: Procesal - Litigación
+    item-list:
+      - Seguros
+      - Contratos
+      - Arrendamientos
+      - Responsabilidad Contractual
+      - Hipotecas y Préstamos
+      - Accidentes de Ciruclación
+      - Energía Eléctrica
+      - Responsabilidad Civil
   about:
     title: 'Tradición'
     text: 'El Despacho Jurídico García Carbonell nació  en 1947, fundado  por el abogado D. Juan José García Carbonell. Hoy es uno de los despachos con más experiencia y antigüedad de la ciudad de Albacete.'

@@ -7,7 +7,7 @@ RUN apt-get update; \
 RUN curl -L https://get.rvm.io | bash 
 
 RUN /bin/bash -l -c "rvm requirements"; \
-  /bin/bash -l -c "rvm install 2.4"
+  /bin/bash -l -c "rvm install 2.6.2"
 
 RUN /bin/bash -l -c "gem install jekyll bundler";
 

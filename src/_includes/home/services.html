@@ -8,21 +8,27 @@
       </div>
     </div>
 
-    <div class="row justify-content-between content">
-      <div class="list">
+    <div class="row content-list pb-5">
+      <div class="col-12 col-lg-6 list">
         <ul>
-          {% for l in site.translations[site.lang]["home"]["services"]["items"] offset:0 limit:4 %}
+          {% for l in site.translations[site.lang]["home"]["services"]["items"] offset:0 limit:3 %}
             <li>{{ l.text }}</li>
           {% endfor %}
           </ul> 
       </div>
-      <div class="list">
+      <div class="col-12 col-lg-6 list right">
         <ul>
-          {% for l in site.translations[site.lang]["home"]["services"]["items"] offset: 4 %}
+          {% for l in site.translations[site.lang]["home"]["services"]["items"] offset: 3 %}
             <li>{{ l.text }}</li>
           {% endfor %}
           </ul> 
       </div>        
+    </div>
+
+    <div class="row justify-content-center items">
+      {% for l in site.translations[site.lang]["home"]["services"]["item-list"] %} 
+        <h5 class="item">{{ l }} <span class="bullet px-2">·</span> </h5> 
+      {% endfor %}
     </div>
 
   </div>
