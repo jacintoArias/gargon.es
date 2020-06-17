@@ -27,7 +27,7 @@
 
     <div class="row justify-content-center items">
       {% for l in site.translations[site.lang]["home"]["services"]["item-list"] %} 
-        <h5 class="item">{{ l }} <span class="bullet px-2">·</span> </h5> 
+        <h5 class="item">{{ l }} {% if forloop.last == false %} <span class="bullet px-2">·</span> {% endif %} </h5> 
       {% endfor %}
     </div>
 

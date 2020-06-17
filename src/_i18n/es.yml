@@ -36,14 +36,15 @@ home:
       - text: Administrativo
       - text: Procesal - Litigación
     item-list:
-      - Seguros
       - Contratos
       - Arrendamientos
-      - Responsabilidad Contractual
-      - Hipotecas y Préstamos
-      - Accidentes de Ciruclación
+      - Herencia Y Sucesiones
+      - Accidentes De Circulacion Y Seguro
+      - Consumidores
       - Energía Eléctrica
-      - Responsabilidad Civil
+      - Familia
+      - Responsabilidad Patrimonial De La Administración
+      - Empresa
   about:
     title: 'Tradición'
     text: 'El Despacho Jurídico García Carbonell nació  en 1947, fundado  por el abogado D. Juan José García Carbonell. Hoy es uno de los despachos con más experiencia y antigüedad de la ciudad de Albacete.'
@@ -52,22 +53,22 @@ home:
     items:
       - name: 'Julio García Bueno'
         date: '1977'
-        pic: 'team/julio.png'
+        pic: 'juliogarciabueno.jpg'
       - name: 'Jacinto Arias López'
         date: '1987'
-        pic: 'team/jacinto.png'
-      - name: 'José Luis González'
+        pic: 'jacintoarias.jpg'
+      - name: 'José Luis González González'
         date: '1990'
-        pic: 'team/jose.png'
+        pic: 'joseluisgonzalez.jpg'
       - name: 'Julio García Cantó'
         date: '2010'
-        pic: 'team/julito.png'
+        pic: 'juliogarciacanto.jpg'
       - name: 'Manuel Cazalilla Ruiz'
         date: '2016'
-        pic: 'team/manu.png'
+        pic: 'manuelcazalilla.jpg'
   contact:
     title: 'Contacto'
-    address: 'Calle Teodoro Camino nº 21 Piso 1, 02006 Albacete'
+    address: 'Calle Teodoro Camino nº 24 Piso 1, 02002 Albacete'
     button: 'Contacto'
     phone: '967 55 04 41'
     fax: '967 50 45 30'
