@@ -1,4 +1,19 @@
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=UA-170485522-1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-170485522-1');
+  </script>
+
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,10 +37,7 @@
 
   <meta content="{% t global.title %}" property="og:title" />
   <meta content="{% t global.description %}" property="og:description" />
-  <meta
-    content="{{ site.assets | append: 'brand.png' }}"
-    property="og:image"
-  />
+  <meta content="{{ site.assets | append: 'brand.png' }}" property="og:image" />
 
   <meta name="theme-color" content="#ffffff" />
 
@@ -37,5 +49,4 @@
 
   <title>{% t global.title %}</title>
   <meta name="description" content="{% t global.description %}" />
-
 </head>
